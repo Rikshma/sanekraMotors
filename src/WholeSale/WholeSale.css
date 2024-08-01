@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+.wholesale-container {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin-top: 0.8%;
+    background-color: #ffffff36;
+}
+
+/* Styles for the cover photo */
+.cover-photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* Full width */
+    height: 80vh;
+    /* Adjust height based on content */
+}
+
+/* Styles for the image */
+.cover-image {
+    max-width: 90%;
+    /* Ensure the image scales within the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Adjust how the image fits in the container */
+    padding: 30px;
+}
+
+.intro-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -25px;
+    margin-top: 5%;
+}
+
+.red-line-a {
+    height: 4px;
+    width: 11%;
+    background-color: #fc0000;
+    margin: 10px auto;
+    border-radius: 2.5px;
+}
+
+.pharagraph {
+    font-size: large;
+    text-align: center;
+    margin: 3% auto;
+    max-width: 70%;
+}
+
+.card-container-a {
+    display: flex;
+    justify-content: space-between;
+    /* Space between the cards */
+    align-items: center;
+    margin: 100px auto;
+    max-width: 70%;
+    /* Adjust this value to control the container width */
+    gap: 10px;
+    /* Space between cards */
+}
+
+.card-container-b {
+    display: flex;
+    justify-content: space-between;
+    /* Space between the cards */
+    align-items: center;
+    margin: 40px auto;
+    max-width: 70%;
+    /* Adjust this value to control the container width */
+    gap: 10px;
+    /* Space between cards */
+}
+
+.card {
+    flex: 1;
+    /* Equal width for all cards */
+    max-width: 25%;
+    /* Adjust the maximum width */
+    height: 15vh;
+    background-color: #fdfdfd;
+    transition: all 0.4s ease-in;
+    box-shadow: 0.4vh 0.4vh 0.6vh rgba(0, 0, 0, 0.4);
+    border: 0.5vh solid #fc0000;
+    border-radius: 3vh 0 3vh 0;
+    display: flex;
+    /* Enable flexbox */
+    align-items: center;
+    /* Center items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+}
+
+.card:hover {
+    transform: translateY(-1.5rem);
+    border-radius: 1rem;
+    border: #0004f8 0.2rem solid;
+}
+
+.card-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    /* Maintain aspect ratio */
+}

@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/* General styles */
+body,
+html,
+.home-container {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: aliceblue;
+
+    /* background-color: black; */
+}
+
+/* Cover photo container styles */
+.cover-photo-container {
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    /* Use Flexbox */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    overflow: hidden;
+}
+
+.overlay-image {
+    position: absolute;
+    width: 100%;
+    height: 75vh;
+    transform: translateX(-5%);
+    border-radius: 30px;
+    z-index: 2;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popUpTitle 3s forwards;
+}
+
+.cover-photo {
+    width: 100%;
+    height: 75vh;
+    border-radius: 30px;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popUpTitle 3s forwards;
+}
+
+.cover-photo-text {
+    position: absolute;
+    bottom: 4%;
+    /* Adjust relative to the cover photo height */
+    left: 5%;
+    /* Adjust for responsiveness */
+    font-size: 1.2vw;
+    /* Use viewport width units for scaling */
+    padding-right: 2%;
+    color: rgb(236, 236, 236);
+    text-decoration: underline;
+    z-index: 3;
+    /* Ensure text is above images */
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popUpTitle 3s forwards;
+}
+
+.title-container {
+    position: absolute;
+    top: 45%;
+    /* Adjust for responsiveness */
+    left: 5%;
+    /* Adjust for responsiveness */
+    width: auto;
+    z-index: 3;
+    /* Ensure text is above images */
+    transform: translate(0, -50%);
+    text-align: left;
+    padding-right: 2%;
+}
+
+.title {
+    font-size: 4vw;
+    /* Use viewport width units for scaling */
+    margin: 0;
+    color: rgb(255, 255, 255);
+    position: relative;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popUpTitle 3s forwards;
+}
+
+.red-line-c {
+    height: 2px;
+    width: 80%;
+    background-color: #fc0000af;
+    margin: 5px 2%;
+    border-radius: 2.5px;
+    opacity: 0;
+    transform: scale(0.4);
+    animation: popUpTitle 3s forwards;
+}
+
+.subtitle {
+    font-size: 1.2vw;
+    /* Use viewport width units for scaling */
+    line-height: 1.5;
+    /* Adjust line height for readability */
+    text-align: center;
+    margin: 0;
+    margin-top: 9%;
+    color: white;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: popUpTitle 3s forwards;
+}
+
+.about-us-link {
+    color: rgb(255, 255, 255);
+    /* Same color as title for consistency */
+    font-size: 1.5vw;
+    margin-top: 3%;
+    margin-left: 41%;
+    text-decoration: none;
+    /* Remove underline */
+    border: 1.8px solid #fc0000;
+    /*Add border */
+    border-radius: 10PX;
+    padding: 7px 15px;
+    /* Add padding for spacing */
+    display: inline-block;
+    /* Make it inline-block to wrap around the content */
+    opacity: 0;
+    /* Starting state for animation */
+    transform: scale(0.5);
+    /* Starting state for animation */
+    animation: popUpTitle 3s forwards;
+}
+
+.about-us-link:hover {
+    color: #fc0000;
+    /* Change color on hover */
+    background-color: none;
+    /* Change background color on hover */
+    border-radius: 10px;
+    /* Optional: Add border radius for rounded corners */
+    border: 2px solid #0400e0;
+    /*Add border */
+}
+
+@keyframes popUpTitle {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container {
+    display: flex;
+    height: auto;
+    padding: 50px;
+    /* Add padding to create space from the edges */
+    margin-top: 2%;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 40px;
+        /* Reduced padding on larger screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 30px;
+        /* Reduced padding on medium screens */
+        margin-top: 3%;
+        /* Slightly increased top margin */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* Stack children vertically on small screens */
+        padding: 20px;
+        /* Further reduced padding */
+        margin-top: 5%;
+        /* Increased top margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        /* Minimal padding on extra small screens */
+        margin-top: 6%;
+        /* Further increased top margin */
+    }
+}
+
+.container.reverse {
+    flex-direction: row-reverse;
+    /* Flip the layout for the second container */
+    padding-right: 14%;
+    margin-top: -6.5%;
+    flex-wrap: wrap;
+}
+
+.container.second {
+    /*flex-direction: row-reverse;  Flip the layout for the second container */
+    padding-right: 3%;
+    margin-top: -6%;
+}
+
+.gallery {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    border-radius: 0;
+    /* Add border radius to the gray rectangle */
+    margin-left: 8%;
+    /* Add space between the two rectangles */
+    opacity: 0;
+    /* Initially hide the gallery */
+
+    transform: translateY(20px);
+    /* Initial translate to hide */
+    transition: opacity 1s ease, transform 1s ease;
+    /* Smooth transitions */
+    margin-top: 5%;
+}
+
+.show-gallery {
+    opacity: 1;
+    /* Show the gallery */
+    transform: translateY(0);
+    /* Reset translate */
+}
+
+.image-grid {
+    display: grid;
+    gap: 20px 30px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    /* Add padding to the image grid */
+}
+
+.image-grid img {
+    border-radius: 30px;
+    width: 8rem;
+    height: 8rem;
+    object-fit: fill;
+    box-shadow: 3px 3px 10px #0b00d2e7;
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transform on hover */
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the image on hover */
+}
+
+.content-box {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    border-radius: 30px;
+    /* Add border radius to the gray rectangle */
+    /* border: 2px solid #fc2626; */
+    margin-left: 8%;
+    /* Add space between the two rectangles */
+    padding: 20px;
+    background-color: white;
+    color: rgb(10, 10, 10);
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    opacity: 0;
+    /* Initially hide the content box */
+    transform: translateY(50px);
+    /* Initial translate to hide */
+    transition: opacity 1s ease, transform 1s ease;
+    /* Smooth transitions */
+    margin-top: 5%;
+}
+
+.show-content-box {
+    opacity: 1;
+    /* Show the content box */
+    transform: translateY(0);
+    /* Reset translate */
+}
+
+.content-box h1 {
+    margin: 30px 10px 20px 2%;
+    /* Adjusted margin for h1 */
+    text-align: left;
+}
+
+.content-box p {
+    margin: 10px 10px 10px;
+    /* Adjusted margin for paragraphs */
+    text-align: left;
+    font-size: 18px;
+}
+
+.content-box button {
+    margin-top: 10%;
+    margin-left: 3%;
+    width: 9em;
+    /* Adjusted width to match the animated button */
+    height: 3em;
+    /* Adjusted height to match the animated button */
+    border-radius: 30em;
+    /* Large border-radius for rounded appearance */
+    font-size: 15px;
+    /* Adjusted font size */
+    font-family: inherit;
+    /* Inherit font family */
+    border: none;
+    /* No border */
+    position: relative;
+    /* For positioning ::before */
+    overflow: hidden;
+    /* Hide overflow for ::before */
+    z-index: 1;
+    /* Ensure the button content is above ::before */
+    box-shadow: 2px 3px 1px #ff0000, -2px -3px 1px #ff0000;
+    /* Box shadow for effect */
+    cursor: pointer;
+    /* Pointer cursor */
+    background-color: rgb(255, 255, 255);
+    /* Initial background color */
+    color: rgb(8, 8, 8);
+    /* Text color */
+    transition: background-color 0.5s ease;
+    /* Smooth transition for background */
+}
+
+.content-box button::before {
+    content: '';
+    width: 0;
+    /* Initial width */
+    height: 3em;
+    /* Match the button height */
+    border-radius: 30em;
+    /* Match the button border-radius */
+    position: absolute;
+    /* Absolute positioning */
+    top: 0;
+    /* Align to top */
+    left: 0;
+    /* Align to left */
+    background-image: linear-gradient(to right, #260fd8 0%, #fd1919 100%);
+    /* Gradient background */
+    transition: width 0.5s ease;
+    /* Smooth transition for width */
+    z-index: -1;
+    /* Behind the button content */
+}
+
+.content-box button:hover::before {
+    width: 9em;
+    /* Full width on hover */
+}
+
+.content-box button:hover {
+    background-color: transparent;
+    /* Transparent to show the gradient */
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.background-section {
+    position: relative;
+    margin-top: 4%;
+    /* Reduced margin to adjust overall section height */
+    width: 100%;
+    height: 35vh;
+    /* Reduced height */
+    text-align: center;
+    /* Center align text */
+}
+
+.background-image {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Maintain aspect ratio, cover entire div */
+    opacity: 100%;
+    /* Slight opacity for the background image */
+    animation: fadeIn 2s;
+    /* Fade-in animation */
+}
+
+.engine-image {
+    width: 100%;
+    /* Adjusted width for better fit */
+    height: 50%;
+    /*margin-top: 0%;  Add margin to the top */
+    position: absolute;
+    opacity: 100%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: popUp 2s;
+    /* Animation for popping up */
+}

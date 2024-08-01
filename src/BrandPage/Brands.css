@@ -1,0 +1,190 @@
+/* Brands.css */
+
+/* Ensure the container takes up the full viewport height */
+
+
+/* Styles for the cover photo */
+.cover-photo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.3%;
+    width: 100%;
+    height: 80vh;
+    /* Adjust the height as needed */
+    overflow: hidden;
+    /* Ensure the image covers the container */
+}
+
+.cover-image {
+    width: 100%;
+    /* Make sure it covers the full width */
+    height: 100%;
+    /* Ensure it covers the full height */
+    object-fit: cover;
+    /* Cover the container while maintaining aspect ratio */
+
+}
+
+.intro-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -25px;
+    margin-top: 5%;
+}
+
+.red-line-a {
+    height: 4px;
+    width: 11%;
+    background-color: #fc0000;
+    margin: 10px auto;
+    border-radius: 2.5px;
+}
+
+.pharagraph p {
+    font-size: large;
+    text-align: justify;
+    margin: 3% auto;
+    max-width: 100%;
+}
+
+.brands-name {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Responsive grid columns */
+    gap: 20px;
+    /* Gap between grid items */
+    padding: 20px;
+    /* Padding around the grid */
+    margin: 0 auto;
+    /* Center align the grid */
+    max-width: 1000px;
+    /* Optional: Add a max-width to control the width */
+    justify-content: center;
+    /* Center content horizontally */
+    padding-left: 16%;
+    padding-right: 8%;
+}
+
+.brands {
+    font-size: large;
+    font-weight: normal;
+    background-color: none;
+    padding: 20px;
+    text-align: left;
+    margin: 0;
+    /* Remove default margin */
+}
+
+.brands:last-child {
+    margin-right: 0;
+    /* Remove margin from the last column */
+}
+
+
+
+/* .red-line-b{
+    height: 1px;
+    width: 80%;
+    background-color: #fc0000;
+    margin: 10px auto;
+    border-radius: 2.5px;
+} */
+
+.brand-image-wrapper {
+    margin-top: 1%;
+    width: 100%;
+    overflow: hidden;
+    /* Hide any overflowing content */
+    padding: 10px 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Relative positioning to position the arrows */
+}
+
+.brand-image-container {
+
+    display: flex;
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
+    gap: 50px;
+    padding: 20px 20px;
+    /* Padding for spacing */
+    cursor: pointer;
+    /* Cursor change on hover */
+    overflow-x: hidden;
+    /* Hide the horizontal scrollbar */
+    scroll-behavior: smooth;
+    /* Smooth scrolling */
+    width: 96%;
+}
+
+.brand-image {
+    width: 15%;
+    /* Width to display a few images at a time */
+    flex-shrink: 5;
+    /* Prevent images from shrinking */
+    object-fit: cover;
+    /* Maintain aspect ratio and cover */
+    border-radius: 10px;
+    /* Rounded corners */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transform on hover */
+}
+
+.brand-image:hover {
+
+    transform: scale(1.1);
+    /* Slightly enlarge the image on hover */
+}
+
+.scroll-left {
+    position: absolute;
+    left: 5%;
+    /* Adjust to increase space from the left relative to the container */
+    top: 50%;
+    /* Position from the top */
+    transform: translateY(-50%);
+    background-color: #0c00f98e;
+    color: #fff;
+    border-radius: 0.7vw;
+    padding: 0.7%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+}
+
+
+.scroll-right {
+    position: absolute;
+    right: 5%;
+    /* Adjust to increase space from the right relative to the container */
+    top: 50%;
+    /* Position from the top */
+    transform: translateY(-50%);
+    background-color: #0c00f98e;
+    color: #fff;
+    padding: 0.7%;
+    border-radius: 0.7vw;
+    cursor: pointer;
+    font-size: 1rem;
+    /* 1rem is equivalent to 16px (browser default), adjust as needed */
+    font-size: 1.125rem;
+    /* 1.125rem is approximately 18px */
+    z-index: 1;
+}
+
+
+.scroll-right:hover {
+    background-color: #fc0000ba;
+    color: #ffffff;
+}
+
+.scroll-left:hover {
+    background-color: #fc0000ba;
+    color: #ffffff;
+}
