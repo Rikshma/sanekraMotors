@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sanekraMotors/static/css/main.a04b40ef.css",
-    "main.js": "/sanekraMotors/static/js/main.ac33f857.js",
+    "main.js": "/sanekraMotors/static/js/main.287fa3c3.js",
     "static/js/453.41fd32cd.chunk.js": "/sanekraMotors/static/js/453.41fd32cd.chunk.js",
     "static/media/image5.jpg": "/sanekraMotors/static/media/image5.e1034edec84f928d51ec.jpg",
     "static/media/image6.jpg": "/sanekraMotors/static/media/image6.0e8fc675e77978999a1e.jpg",
@@ -40,11 +40,11 @@
     "static/media/SpareParts3.jpg": "/sanekraMotors/static/media/SpareParts3.ce7fcb135f247febf20f.jpg",
     "index.html": "/sanekraMotors/index.html",
     "main.a04b40ef.css.map": "/sanekraMotors/static/css/main.a04b40ef.css.map",
-    "main.ac33f857.js.map": "/sanekraMotors/static/js/main.ac33f857.js.map",
+    "main.287fa3c3.js.map": "/sanekraMotors/static/js/main.287fa3c3.js.map",
     "453.41fd32cd.chunk.js.map": "/sanekraMotors/static/js/453.41fd32cd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a04b40ef.css",
-    "static/js/main.ac33f857.js"
+    "static/js/main.287fa3c3.js"
   ]
 }
